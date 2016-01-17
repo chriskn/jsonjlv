@@ -1,5 +1,4 @@
-<a href="https://raw.githubusercontent.com/chriskn/jsonjvl/master/jsonjvl-eclipse-plugin/jsonjlv-update-site/target/repository/" class="drag" title="Drag to your running Eclipse workspace to install JSONJLV"><img src="http://marketplace.eclipse.org/sites/all/themes/solstice/_themes/solstice_marketplace/public/images/btn-install.png" alt="Drag to your running Eclipse workspace to install JSONJLV" /></a>
-
+h1. JSONJVL
 
 h3. Information
 
