@@ -18,7 +18,7 @@ public class SocketHandlerTest {
     Socket socket;
 
     @Test
-    public void test() throws Exception {
+    public void test_socketHandler() throws Exception {
         final String host = "127.0.0.1";
         final int outgoingPort = TestUtils.getAvailablePort();
         final int incomingPort = TestUtils.getAvailablePort(outgoingPort);
