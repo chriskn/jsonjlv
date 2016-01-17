@@ -3,7 +3,7 @@
 
 h3. Information
 
-JSONJVL is a JSON to Log4j converter for logging evenets which works with the Java logging viewer ([JVL}(https://github.com/rdiachenko/jlv)) . JSONJVL is available as a plugin for Eclipse IDE.
+JSONJVL is a JSON to Log4j converter for logging evenets which works with the Java logging viewer ([JVL](https://github.com/rdiachenko/jlv)) . JSONJVL is available as a plugin for Eclipse IDE.
 
 
 h3. Requirements:
