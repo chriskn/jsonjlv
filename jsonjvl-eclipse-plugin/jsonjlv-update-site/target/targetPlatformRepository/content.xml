@@ -400,6 +400,39 @@
         </instructions>
       </touchpointData>
     </unit>
+    <unit id='com.github.chriskn.jsonjvl.plugin' version='1.0.0.201601180841'>
+      <update id='com.github.chriskn.jsonjvl.plugin' range='[0.0.0,1.0.0.201601180841)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='Jsonjlv-Plugin'/>
+        <property name='maven-groupId' value='com.github.chriskn.jsonjvl'/>
+        <property name='maven-artifactId' value='com.github.chriskn.jsonjvl.plugin'/>
+        <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.github.chriskn.jsonjvl.plugin' version='1.0.0.201601180841'/>
+        <provided namespace='osgi.bundle' name='com.github.chriskn.jsonjvl.plugin' version='1.0.0.201601180841'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='6'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.osgi' range='0.0.0'/>
+        <required namespace='java.package' name='org.json' range='0.0.0'/>
+        <required namespace='java.package' name='org.slf4j' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.github.chriskn.jsonjvl.plugin' version='1.0.0.201601180841'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: com.github.chriskn.jsonjvl.plugin;singleton:=true&#xA;Bundle-Version: 1.0.0.201601180841&#xA;
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
     <unit id='org.eclipse.core.runtime' version='3.9.100.v20131218-1515'>
       <update id='org.eclipse.core.runtime' range='[0.0.0,3.9.100.v20131218-1515)' severity='0'/>
       <properties size='8'>
@@ -444,39 +477,6 @@
           </instruction>
         </instructions>
       </touchpointData>
-    </unit>
-    <unit id='com.github.chriskn.jsonjvl.feature.feature.group' version='1.0.0.201601131644' singleton='false'>
-      <update id='com.github.chriskn.jsonjvl.feature.feature.group' range='[0.0.0,1.0.0.201601131644)' severity='0'/>
-      <properties size='8'>
-        <property name='org.eclipse.equinox.p2.name' value='jsonjvl'/>
-        <property name='org.eclipse.equinox.p2.description' value='JSON converter for JVL (plugin for Eclipse IDE)'/>
-        <property name='org.eclipse.equinox.p2.description.url' value='https://github.com/chriskn/jsonjlv'/>
-        <property name='org.eclipse.equinox.p2.provider' value='Christoph Knauf'/>
-        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
-        <property name='maven-groupId' value='com.github.chriskn.jsonjvl'/>
-        <property name='maven-artifactId' value='com.github.chriskn.jsonjvl.feature'/>
-        <property name='maven-version' value='1.0.0-SNAPSHOT'/>
-      </properties>
-      <provides size='1'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='com.github.chriskn.jsonjvl.feature.feature.group' version='1.0.0.201601131644'/>
-      </provides>
-      <requires size='2'>
-        <required namespace='org.eclipse.equinox.p2.iu' name='com.github.chriskn.jsonjvl.plugin' range='[1.0.0.201601131644,1.0.0.201601131644]'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='com.github.chriskn.jsonjvl.feature.feature.jar' range='[1.0.0.201601131644,1.0.0.201601131644]'>
-          <filter>
-            (org.eclipse.update.install.features=true)
-          </filter>
-        </required>
-      </requires>
-      <touchpoint id='null' version='0.0.0'/>
-      <licenses size='1'>
-        <license uri='http://www.eclipse.org/legal/epl-v10.html' url='http://www.eclipse.org/legal/epl-v10.html'>
-          Eclipse Public License v1.0
-        </license>
-      </licenses>
-      <copyright uri='http://www.eclipse.org/legal/epl-v10.html' url='http://www.eclipse.org/legal/epl-v10.html'>
-        JSONJLV is licensed under the terms of the Eclipse Public License v1.0.
-      </copyright>
     </unit>
     <unit id='javax.annotation' version='1.1.0.v201209060031' singleton='false'>
       <update id='javax.annotation' range='[0.0.0,1.1.0.v201209060031)' severity='0'/>
@@ -993,6 +993,44 @@
         </instructions>
       </touchpointData>
     </unit>
+    <unit id='com.github.chriskn.jsonjvl.feature.feature.jar' version='1.0.0.201601180841'>
+      <properties size='7'>
+        <property name='org.eclipse.equinox.p2.name' value='jsonjvl'/>
+        <property name='org.eclipse.equinox.p2.description' value='JSON converter for JVL (plugin for Eclipse IDE)'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='https://github.com/chriskn/jsonjlv'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Christoph Knauf'/>
+        <property name='maven-groupId' value='com.github.chriskn.jsonjvl'/>
+        <property name='maven-artifactId' value='com.github.chriskn.jsonjvl.feature'/>
+        <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.github.chriskn.jsonjvl.feature.feature.jar' version='1.0.0.201601180841'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='com.github.chriskn.jsonjvl.feature' version='1.0.0.201601180841'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='com.github.chriskn.jsonjvl.feature' version='1.0.0.201601180841'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license uri='http://www.eclipse.org/legal/epl-v10.html' url='http://www.eclipse.org/legal/epl-v10.html'>
+          Eclipse Public License v1.0
+        </license>
+      </licenses>
+      <copyright uri='http://www.eclipse.org/legal/epl-v10.html' url='http://www.eclipse.org/legal/epl-v10.html'>
+        JSONJLV is licensed under the terms of the Eclipse Public License v1.0.
+      </copyright>
+    </unit>
     <unit id='org.eclipse.e4.ui.services' version='1.0.1.v20131118-1940'>
       <update id='org.eclipse.e4.ui.services' range='[0.0.0,1.0.1.v20131118-1940)' severity='0'/>
       <properties size='8'>
@@ -1077,44 +1115,6 @@
           </instruction>
         </instructions>
       </touchpointData>
-    </unit>
-    <unit id='com.github.chriskn.jsonjvl.feature.feature.jar' version='1.0.0.201601131644'>
-      <properties size='7'>
-        <property name='org.eclipse.equinox.p2.name' value='jsonjvl'/>
-        <property name='org.eclipse.equinox.p2.description' value='JSON converter for JVL (plugin for Eclipse IDE)'/>
-        <property name='org.eclipse.equinox.p2.description.url' value='https://github.com/chriskn/jsonjlv'/>
-        <property name='org.eclipse.equinox.p2.provider' value='Christoph Knauf'/>
-        <property name='maven-groupId' value='com.github.chriskn.jsonjvl'/>
-        <property name='maven-artifactId' value='com.github.chriskn.jsonjvl.feature'/>
-        <property name='maven-version' value='1.0.0-SNAPSHOT'/>
-      </properties>
-      <provides size='3'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='com.github.chriskn.jsonjvl.feature.feature.jar' version='1.0.0.201601131644'/>
-        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
-        <provided namespace='org.eclipse.update.feature' name='com.github.chriskn.jsonjvl.feature' version='1.0.0.201601131644'/>
-      </provides>
-      <filter>
-        (org.eclipse.update.install.features=true)
-      </filter>
-      <artifacts size='1'>
-        <artifact classifier='org.eclipse.update.feature' id='com.github.chriskn.jsonjvl.feature' version='1.0.0.201601131644'/>
-      </artifacts>
-      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
-      <touchpointData size='1'>
-        <instructions size='1'>
-          <instruction key='zipped'>
-            true
-          </instruction>
-        </instructions>
-      </touchpointData>
-      <licenses size='1'>
-        <license uri='http://www.eclipse.org/legal/epl-v10.html' url='http://www.eclipse.org/legal/epl-v10.html'>
-          Eclipse Public License v1.0
-        </license>
-      </licenses>
-      <copyright uri='http://www.eclipse.org/legal/epl-v10.html' url='http://www.eclipse.org/legal/epl-v10.html'>
-        JSONJLV is licensed under the terms of the Eclipse Public License v1.0.
-      </copyright>
     </unit>
     <unit id='org.eclipse.emf.common' version='2.9.2.v20131212-0545'>
       <update id='org.eclipse.emf.common' range='[0.0.0,2.9.2.v20131212-0545)' severity='0'/>
@@ -1651,6 +1651,39 @@
         </instructions>
       </touchpointData>
     </unit>
+    <unit id='com.github.chriskn.jsonjvl.feature.feature.group' version='1.0.0.201601180841' singleton='false'>
+      <update id='com.github.chriskn.jsonjvl.feature.feature.group' range='[0.0.0,1.0.0.201601180841)' severity='0'/>
+      <properties size='8'>
+        <property name='org.eclipse.equinox.p2.name' value='jsonjvl'/>
+        <property name='org.eclipse.equinox.p2.description' value='JSON converter for JVL (plugin for Eclipse IDE)'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='https://github.com/chriskn/jsonjlv'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Christoph Knauf'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+        <property name='maven-groupId' value='com.github.chriskn.jsonjvl'/>
+        <property name='maven-artifactId' value='com.github.chriskn.jsonjvl.feature'/>
+        <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.github.chriskn.jsonjvl.feature.feature.group' version='1.0.0.201601180841'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='com.github.chriskn.jsonjvl.plugin' range='[1.0.0.201601180841,1.0.0.201601180841]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='com.github.chriskn.jsonjvl.feature.feature.jar' range='[1.0.0.201601180841,1.0.0.201601180841]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license uri='http://www.eclipse.org/legal/epl-v10.html' url='http://www.eclipse.org/legal/epl-v10.html'>
+          Eclipse Public License v1.0
+        </license>
+      </licenses>
+      <copyright uri='http://www.eclipse.org/legal/epl-v10.html' url='http://www.eclipse.org/legal/epl-v10.html'>
+        JSONJLV is licensed under the terms of the Eclipse Public License v1.0.
+      </copyright>
+    </unit>
     <unit id='org.w3c.dom.smil' version='1.0.1.v200903091627' singleton='false'>
       <update id='org.w3c.dom.smil' range='[0.0.0,1.0.1.v200903091627)' severity='0'/>
       <properties size='5'>
@@ -2074,6 +2107,56 @@
         </instructions>
       </touchpointData>
     </unit>
+    <unit id='org.eclipse.e4.ui.bindings' version='0.10.102.v20140117-1939'>
+      <update id='org.eclipse.e4.ui.bindings' range='[0.0.0,0.10.102.v20140117-1939)' severity='0'/>
+      <properties size='8'>
+        <property name='df_LT.providerName' value='Eclipse.org'/>
+        <property name='df_LT.pluginName' value='Eclipse Bindings Support'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+        <property name='maven-groupId' value='org.eclipse.e4'/>
+        <property name='maven-artifactId' value='org.eclipse.e4.ui.bindings'/>
+        <property name='maven-version' value='0.10.102-SNAPSHOT'/>
+      </properties>
+      <provides size='7'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.ui.bindings' version='0.10.102.v20140117-1939'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.e4.ui.bindings' version='0.10.102.v20140117-1939'/>
+        <provided namespace='java.package' name='org.eclipse.e4.ui.bindings' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.e4.ui.bindings.internal' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.e4.ui.bindings.keys' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='15'>
+        <required namespace='osgi.bundle' name='org.eclipse.swt' range='[3.6.0,4.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.commands' range='[3.5.0,4.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.e4.core.contexts' range='1.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.e4.core.di' range='1.1.0'/>
+        <required namespace='java.package' name='javax.annotation' range='1.0.0'/>
+        <required namespace='java.package' name='javax.inject' range='1.0.0'/>
+        <required namespace='java.package' name='org.eclipse.e4.core.commands' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.e4.core.commands.internal' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.e4.core.services.log' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.jface.bindings' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.jface.bindings.keys' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.jface.bindings.keys.formatting' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.jface.dialogs' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.jface.window' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='1.5.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.e4.ui.bindings' version='0.10.102.v20140117-1939'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.e4.ui.bindings;singleton:=true&#xA;Bundle-Version: 0.10.102.v20140117-1939
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
     <unit id='a.jre.javase' version='1.6.0' singleton='false'>
       <provides size='171'>
         <provided namespace='org.eclipse.equinox.p2.iu' name='a.jre.javase' version='1.6.0'/>
@@ -2249,56 +2332,6 @@
         <provided namespace='osgi.ee' name='JavaSE' version='1.6.0'/>
       </provides>
       <touchpoint id='org.eclipse.equinox.p2.native' version='1.0.0'/>
-    </unit>
-    <unit id='org.eclipse.e4.ui.bindings' version='0.10.102.v20140117-1939'>
-      <update id='org.eclipse.e4.ui.bindings' range='[0.0.0,0.10.102.v20140117-1939)' severity='0'/>
-      <properties size='8'>
-        <property name='df_LT.providerName' value='Eclipse.org'/>
-        <property name='df_LT.pluginName' value='Eclipse Bindings Support'/>
-        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
-        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
-        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
-        <property name='maven-groupId' value='org.eclipse.e4'/>
-        <property name='maven-artifactId' value='org.eclipse.e4.ui.bindings'/>
-        <property name='maven-version' value='0.10.102-SNAPSHOT'/>
-      </properties>
-      <provides size='7'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.e4.ui.bindings' version='0.10.102.v20140117-1939'/>
-        <provided namespace='osgi.bundle' name='org.eclipse.e4.ui.bindings' version='0.10.102.v20140117-1939'/>
-        <provided namespace='java.package' name='org.eclipse.e4.ui.bindings' version='0.0.0'/>
-        <provided namespace='java.package' name='org.eclipse.e4.ui.bindings.internal' version='0.0.0'/>
-        <provided namespace='java.package' name='org.eclipse.e4.ui.bindings.keys' version='0.0.0'/>
-        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
-        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
-      </provides>
-      <requires size='15'>
-        <required namespace='osgi.bundle' name='org.eclipse.swt' range='[3.6.0,4.0.0)'/>
-        <required namespace='osgi.bundle' name='org.eclipse.core.commands' range='[3.5.0,4.0.0)'/>
-        <required namespace='osgi.bundle' name='org.eclipse.e4.core.contexts' range='1.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.e4.core.di' range='1.1.0'/>
-        <required namespace='java.package' name='javax.annotation' range='1.0.0'/>
-        <required namespace='java.package' name='javax.inject' range='1.0.0'/>
-        <required namespace='java.package' name='org.eclipse.e4.core.commands' range='0.0.0'/>
-        <required namespace='java.package' name='org.eclipse.e4.core.commands.internal' range='0.0.0'/>
-        <required namespace='java.package' name='org.eclipse.e4.core.services.log' range='0.0.0'/>
-        <required namespace='java.package' name='org.eclipse.jface.bindings' range='0.0.0'/>
-        <required namespace='java.package' name='org.eclipse.jface.bindings.keys' range='0.0.0'/>
-        <required namespace='java.package' name='org.eclipse.jface.bindings.keys.formatting' range='0.0.0'/>
-        <required namespace='java.package' name='org.eclipse.jface.dialogs' range='0.0.0'/>
-        <required namespace='java.package' name='org.eclipse.jface.window' range='0.0.0'/>
-        <required namespace='java.package' name='org.osgi.framework' range='1.5.0'/>
-      </requires>
-      <artifacts size='1'>
-        <artifact classifier='osgi.bundle' id='org.eclipse.e4.ui.bindings' version='0.10.102.v20140117-1939'/>
-      </artifacts>
-      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
-      <touchpointData size='1'>
-        <instructions size='1'>
-          <instruction key='manifest'>
-            Bundle-SymbolicName: org.eclipse.e4.ui.bindings;singleton:=true&#xA;Bundle-Version: 0.10.102.v20140117-1939
-          </instruction>
-        </instructions>
-      </touchpointData>
     </unit>
     <unit id='org.eclipse.e4.ui.workbench3' version='0.12.0.v20130515-1857'>
       <update id='org.eclipse.e4.ui.workbench3' range='[0.0.0,0.12.0.v20130515-1857)' severity='0'/>
@@ -2772,39 +2805,6 @@
         <instructions size='1'>
           <instruction key='manifest'>
             Bundle-SymbolicName: org.eclipse.core.commands&#xA;Bundle-Version: 3.6.100.v20130515-1857
-          </instruction>
-        </instructions>
-      </touchpointData>
-    </unit>
-    <unit id='com.github.chriskn.jsonjvl.plugin' version='1.0.0.201601131644'>
-      <update id='com.github.chriskn.jsonjvl.plugin' range='[0.0.0,1.0.0.201601131644)' severity='0'/>
-      <properties size='4'>
-        <property name='org.eclipse.equinox.p2.name' value='Jsonjlv-Plugin'/>
-        <property name='maven-groupId' value='com.github.chriskn.jsonjvl'/>
-        <property name='maven-artifactId' value='com.github.chriskn.jsonjvl.plugin'/>
-        <property name='maven-version' value='1.0.0-SNAPSHOT'/>
-      </properties>
-      <provides size='3'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='com.github.chriskn.jsonjvl.plugin' version='1.0.0.201601131644'/>
-        <provided namespace='osgi.bundle' name='com.github.chriskn.jsonjvl.plugin' version='1.0.0.201601131644'/>
-        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
-      </provides>
-      <requires size='6'>
-        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.osgi' range='0.0.0'/>
-        <required namespace='java.package' name='org.json' range='0.0.0'/>
-        <required namespace='java.package' name='org.slf4j' range='0.0.0'/>
-      </requires>
-      <artifacts size='1'>
-        <artifact classifier='osgi.bundle' id='com.github.chriskn.jsonjvl.plugin' version='1.0.0.201601131644'/>
-      </artifacts>
-      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
-      <touchpointData size='1'>
-        <instructions size='1'>
-          <instruction key='manifest'>
-            Bundle-SymbolicName: com.github.chriskn.jsonjvl.plugin;singleton:=true&#xA;Bundle-Version: 1.0.0.201601131644
           </instruction>
         </instructions>
       </touchpointData>

@@ -66,9 +66,10 @@ public class ServerTest {
     }
     
     @Test
-    public void test_shutdown(){
+    public void test_shutdown() throws InterruptedException{
         sut.start();
         sut.shutdown();
+        Thread.sleep(1000);
         assertFalse(sut.isAlive());
         assertTrue(sut.executor.isShutdown()); 
     }
