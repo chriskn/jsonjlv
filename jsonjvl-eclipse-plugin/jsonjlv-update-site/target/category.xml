@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.github.chriskn.jsonjvl.feature_1.0.0.qualifier.jar" id="com.github.chriskn.jsonjvl.feature">
+      <category name="jsonjlv"/>
+   </feature>
+   <category-def name="jsonjlv" label="JSONJLV Eclipse plugin"/>
+</site>
