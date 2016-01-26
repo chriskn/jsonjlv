@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<relativePath>../pom.xml</relativePath>
+		<groupId>com.github.chriskn.jsonjlv</groupId>
+		<artifactId>com.github.chriskn.jsonjlv.parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	
+	<artifactId>com.github.chriskn.jsonjlv.updatesite</artifactId>
+	<packaging>eclipse-repository</packaging>
+        <name>JSONJLV Eclipse update site</name>
+
+        <build>
+                <plugins>
+                        <plugin>
+                          <groupId>org.codehaus.mojo</groupId>
+                          <artifactId>wagon-maven-plugin</artifactId>
+                          <version>1.0-beta-5</version>
+                            <configuration>
+                              <fromDir>${project.build.directory}/repository/</fromDir>
+                              <includes>**</includes>
+                              <toDir>eclipse</toDir>
+                              <url>file://${project.build.directory}/../../../repo</url>
+                            </configuration>
+                        </plugin>
+                </plugins>
+        </build>
+</project>
