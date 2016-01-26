@@ -4,7 +4,7 @@
 
 	<groupId>com.github.chriskn.jsonjlv</groupId>
 	<artifactId>jsonjlv-core</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.1</version>
 
 	<name>JSON to JLV converter</name>
 
