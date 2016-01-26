@@ -4,8 +4,8 @@ import org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer;
 import org.eclipse.jface.preference.IPreferenceStore;
 
 import com.github.chriskn.jsonjlv.internal.Activator;
-import com.github.chriskn.jsonjvl.prefrences.PreferencesModel;
-import com.github.chriskn.jsonjvl.prefrences.PreferencesModelConverter;
+import com.github.chriskn.jsonjlv.prefrences.PreferencesModel;
+import com.github.chriskn.jsonjlv.prefrences.PreferencesModelConverter;
 
 public class PreferenceInitializer extends AbstractPreferenceInitializer {
 

@@ -14,7 +14,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.github.chriskn.jsonjlv.ui.properties.PreferenceManager;
-import com.github.chriskn.jsonjvl.Server;
+import com.github.chriskn.jsonjlv.Server;
 
 /**
  * The activator class controls the plug-in life cycle

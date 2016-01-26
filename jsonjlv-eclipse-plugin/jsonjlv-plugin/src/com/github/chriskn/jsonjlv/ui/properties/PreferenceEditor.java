@@ -18,8 +18,8 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 
 import com.github.chriskn.jsonjlv.internal.Activator;
-import com.github.chriskn.jsonjvl.prefrences.PreferencesModel;
-import com.github.chriskn.jsonjvl.prefrences.PreferencesModelConverter;
+import com.github.chriskn.jsonjlv.prefrences.PreferencesModel;
+import com.github.chriskn.jsonjlv.prefrences.PreferencesModelConverter;
 
 public class PreferenceEditor extends FieldEditor {
 

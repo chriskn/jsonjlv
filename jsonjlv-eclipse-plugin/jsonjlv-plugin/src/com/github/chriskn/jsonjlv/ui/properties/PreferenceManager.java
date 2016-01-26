@@ -2,8 +2,8 @@ package com.github.chriskn.jsonjlv.ui.properties;
 
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.util.IPropertyChangeListener;
-import com.github.chriskn.jsonjvl.prefrences.PreferencesModel;
-import com.github.chriskn.jsonjvl.prefrences.PreferencesModelConverter;
+import com.github.chriskn.jsonjlv.prefrences.PreferencesModel;
+import com.github.chriskn.jsonjlv.prefrences.PreferencesModelConverter;
 
 public final class PreferenceManager {
 
