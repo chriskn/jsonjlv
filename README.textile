@@ -11,5 +11,5 @@ h3. Requirements:
 
 h3. Eclipse update site
 
-bc.. https://github.com/chriskn/jsonjlv/raw/gh-pages/repo
+bc.. http://chriskn.github.io/jsonjlv/repo/
 
