@@ -24,13 +24,7 @@ public class Server extends Thread {
     private String ip;
 
     public Server(int incomingPort, int outgoingPort, String ip) throws Exception {
-        if (incomingPort < 0 || outgoingPort < 0) {
-            throw new IllegalArgumentException("Port value should be a positive number. Current incoming port: "
-                    + incomingPort + ", current outgoing port: " + outgoingPort);
-        }
-        if (!ip.matches(IPADDRESS_PATTERN)) {
-            throw new IllegalArgumentException("Invalid ip address: " + ip);
-        }
+        validate(incomingPort, outgoingPort, ip);
         this.outgoingPort = outgoingPort;
         this.ip = ip;
         try {
@@ -41,6 +35,16 @@ public class Server extends Thread {
         }
     }
 
+    private void validate(int incomingPort, int outgoingPort, String ip) {
+        if (incomingPort < 0 || outgoingPort < 0) {
+            throw new IllegalArgumentException("Port value should be a positive number. Current incoming port: "
+                    + incomingPort + ", current outgoing port: " + outgoingPort);
+        }
+        if (!ip.matches(IPADDRESS_PATTERN)) {
+            throw new IllegalArgumentException("Invalid ip address: " + ip);
+        }
+    }
+
     @Override
     public void run() {
         logger.debug("Waiting for a new connection on port " + serverSocket.getLocalPort() + ". Will send to " + ip
@@ -48,8 +52,6 @@ public class Server extends Thread {
         while (!serverSocket.isClosed()) {
             try {
                 final Socket socket = serverSocket.accept();
-                socket.setSoTimeout(5000);
-                logger.debug("Connection has been accepted from " + socket.getInetAddress().getHostName());
                 handler = new SocketHandler(socket, ip, outgoingPort);
                 executor.execute(handler);
             } catch (RejectedExecutionException e) {

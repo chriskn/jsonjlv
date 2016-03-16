@@ -3,7 +3,11 @@ package com.github.chriskn.jsonjlv;
 import java.io.DataInputStream;
 import java.io.EOFException;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.ObjectOutputStream;
+import java.io.Reader;
+import java.io.UnsupportedEncodingException;
 import java.net.Socket;
 import org.apache.log4j.Logger;
 import org.apache.log4j.spi.LoggingEvent;
@@ -27,14 +31,10 @@ public class SocketHandler implements Runnable {
 
     @Override
     public void run() {
-        DataInputStream inputStream = null;
-        try {
-            inputStream = new DataInputStream(socket.getInputStream());
+        try (DataInputStream inputStream = new DataInputStream(socket.getInputStream())) {
             while (!socket.isClosed()) {
                 int length = inputStream.readInt();
-                byte[] data = new byte[length];
-                inputStream.read(data);
-                String dataString = new String(data, "UTF-8");
+                String dataString = slurp(inputStream, length);
                 LoggingEvent event = deserializer.deserialize(new JSONObject(dataString));
                 send(event);
             }
@@ -43,15 +43,32 @@ public class SocketHandler implements Runnable {
         } catch (IOException e) {
             logger.error(e);
         } finally {
-            if (inputStream != null) {
+            if (socket != null) {
                 try {
-                    inputStream.close();
-//                    socket.close();
+                    socket.close();
                 } catch (IOException e) {
                     logger.error("Error while closing socket", e);
                 }
             }
         }
+    }
+
+    private String slurp(final InputStream is, final int bufferSize) {
+        final char[] buffer = new char[bufferSize];
+        final StringBuilder out = new StringBuilder();
+        try (Reader in = new InputStreamReader(is, "UTF-8")) {
+            for (;;) {
+                int rsz = in.read(buffer, 0, buffer.length);
+                if (rsz < 0)
+                    break;
+                out.append(buffer, 0, rsz);
+            }
+        } catch (UnsupportedEncodingException ex) {
+            logger.error(ex.getMessage(), ex);
+        } catch (IOException ex) {
+            logger.error(ex.getMessage(), ex);
+        }
+        return out.toString();
     }
 
     private void send(LoggingEvent event) {
