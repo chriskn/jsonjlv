@@ -6,7 +6,7 @@
 		<relativePath>../pom.xml</relativePath>
 		<groupId>com.github.chriskn.jsonjlv</groupId>
 		<artifactId>com.github.chriskn.jsonjlv.parent</artifactId>
-		<version>1.0.1</version>
+		<version>1.0.2</version>
 	</parent>
 	
 	<artifactId>com.github.chriskn.jsonjlv.updatesite</artifactId>
