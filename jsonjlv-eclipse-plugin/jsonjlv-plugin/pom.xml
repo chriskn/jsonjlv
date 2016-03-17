@@ -6,7 +6,7 @@
 		<relativePath>../pom.xml</relativePath>
 		<groupId>com.github.chriskn.jsonjlv</groupId>
 		<artifactId>com.github.chriskn.jsonjlv.parent</artifactId>
-		<version>1.0.1</version>
+		<version>1.0.2</version>
 	</parent>
 
 	<groupId>com.github.chriskn.jsonjlv</groupId>
@@ -18,7 +18,7 @@
 		<dependency>
 			<groupId>com.github.chriskn.jsonjlv</groupId>
 			<artifactId>jsonjlv-core</artifactId>
-			<version>1.0.1</version>
+			<version>${jsonjlv-core.version}</version>
 		</dependency>
 	</dependencies>
 

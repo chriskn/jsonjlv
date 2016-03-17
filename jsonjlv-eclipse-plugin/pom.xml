@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.chriskn.jsonjlv</groupId>
 	<artifactId>com.github.chriskn.jsonjlv.parent</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<packaging>pom</packaging>
 
 	<name>JSON converter for JLV plugin (parent)</name>
@@ -16,7 +16,7 @@
 
 	<properties>
 		<tycho-version>0.19.0</tycho-version>
-		<jsonjlv-core.version>1.0.0-SNAPSHOT</jsonjlv-core.version>
+		<jsonjlv-core.version>1.0.2</jsonjlv-core.version>
 		<kepler-repo.url>http://download.eclipse.org/releases/kepler</kepler-repo.url>
 	</properties>
 

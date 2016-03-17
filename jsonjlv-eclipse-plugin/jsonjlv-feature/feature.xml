@@ -2,7 +2,7 @@
 <feature
       id="com.github.chriskn.jsonjlv.feature"
       label="jsonjlv"
-      version="1.0.1"
+      version="1.0.2"
       provider-name="Christoph Knauf">
 
    <description url="https://github.com/chriskn/jsonjlv">
@@ -21,7 +21,7 @@
          id="com.github.chriskn.jsonjlv.plugin"
          download-size="0"
          install-size="0"
-         version="1.0.1"
+         version="1.0.2"
          unpack="false"/>
 
 </feature>
